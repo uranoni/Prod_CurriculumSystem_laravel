@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-qweqweqweqwe
-</body>
-</html>
+@extends('errors::illustrated-layout')
 
+@section('code', '404')
+@section('title', __('Page Not Found'))
+
+@section('image')
+    <div style="background-image: url({{ asset('/svg/404.svg') }});" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center">
+    </div>
+@endsection
+
+@section('message', __('Sorry, the page you are looking for could not be found.'))
