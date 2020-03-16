@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Course;
+
 class CoursesTableSeeder extends Seeder
 {
     /**
@@ -12,7 +13,7 @@ class CoursesTableSeeder extends Seeder
     public function run()
     {
         DB::table('courses')->truncate();
-// php artisan db:seed --class=CoursesTableSeeder
+        // php artisan db:seed --class=CoursesTableSeeder
         factory(Course::class, 5)->create();
     }
 }
